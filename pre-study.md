@@ -16,6 +16,9 @@ Think of a database as a highly organized digital filing cabinet. In Data Scienc
 
 **Data Definition Language (DDL)** is the subset of SQL used to **build and modify the structure** of the database. While other SQL parts handle data entry, DDL creates the "skeleton."
 
+### Video introduction
+- [SQL DDL - The Blueprint for Data](https://youtu.be/adACCuMFjac)
+
 ## **2\. Our Toolkit**
 
 We will be using two modern, lightweight tools:
