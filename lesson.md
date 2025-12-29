@@ -273,7 +273,7 @@ Ref: classes.teacher_id > teachers.id // many-to-one
   * We can import data from a CSV file into a table.
 
 ```sql
-COPY lesson.teachers FROM '/Users/fengfeng/Dev/6m-data-1.3-sql-basic-ddl/data/teachers.csv' (AUTO_DETECT TRUE);
+COPY lesson.teachers FROM '<full directory path>' (AUTO_DETECT TRUE);
 ```
 
 > **Note:** For data import, use the full directory path to the CSV files, e.g. `/Users/fengfeng/Dev/6m-data-1.3-sql-basic-ddl/data/teachers.csv`
@@ -301,13 +301,17 @@ WHERE id = 4;
   * Let's export the data from the student table into a CSV file delimited with `|`.       Remember to prepend the full directory path to the CSV file.
 
 ```sql
-COPY (SELECT * FROM lesson.students) TO '/Users/fengfeng/Dev/6m-data-1.3-sql-basic-ddl/data/students_new.csv' WITH (HEADER 1, DELIMITER '|');
+COPY (SELECT * FROM lesson.students) TO '<full directory path>' WITH (HEADER 1, DELIMITER '|');
+
+-- example <full directory path>: /Users/fengfeng/Dev/6m-data-1.3-sql-basic-ddl/data/students_new.csv
 ```
 
   * We can also export the data into a JSON file (you will learn more about JSON in Module 2).
 
 ```sql
-COPY (SELECT * FROM lesson.students) TO '/Users/fengfeng/Dev/6m-data-1.3-sql-basic-ddl/data/students.json';
+COPY (SELECT * FROM lesson.students) TO '<full directory path>';
+
+-- example <full directory path>:  /Users/fengfeng/Dev/6m-data-1.3-sql-basic-ddl/data/students.json
 ```
 
 5. **Exercise:**
